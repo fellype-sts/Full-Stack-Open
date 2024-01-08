@@ -1,0 +1,16 @@
+browser->server: GET request to https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML document
+browser->server: GET request to https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: GET request to https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note left of browser: browser runs javascript which request the data.json
+browser->server: GET request to https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: data.json
+
+note left of browser: browser executes the event handler to display the notes
+
+browser->server: HTTP POST (the note) 
+
+note left of browser: browser reloads
